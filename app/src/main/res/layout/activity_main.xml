@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.fchen.swipelayout.MainActivity">
+
+    <com.daimajia.swipe.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swipe_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_swipelayout_height">
+        <!-- Bottom view holder start -->
+        <LinearLayout
+            android:id="@+id/bottom_wrapper"
+            android:weightSum="1"
+            android:layout_gravity="left"
+            android:layout_width="@dimen/layout_swipelayout_tripleheight"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <!-- Bottom view message icon start -->
+            <LinearLayout
+                android:layout_width="@dimen/layout_swipelayout_height"
+                android:layout_height="match_parent"
+                android:background="@color/grey"
+                android:layout_gravity="left">
+                <ImageView
+                    android:id="@+id/swipe_message"
+                    android:layout_width="@dimen/layout_swipelayout_height"
+                    android:layout_height="@dimen/layout_swipelayout_height"
+                    android:gravity="center"
+                    android:padding="@dimen/layout_image_padding"
+                    android:src="@mipmap/message" />
+            </LinearLayout>
+            <!-- Bottom view message icon end -->
+            <!-- Bottom view archive icon start -->
+            <LinearLayout
+                android:layout_width="@dimen/layout_swipelayout_height"
+                android:layout_height="match_parent"
+                android:background="@color/blue"
+                android:layout_gravity="left">
+                <ImageView
+                    android:id="@+id/swipe_archive"
+                    android:layout_width="@dimen/layout_swipelayout_height"
+                    android:layout_height="@dimen/layout_swipelayout_height"
+                    android:gravity="center"
+                    android:padding="@dimen/layout_image_padding"
+                    android:src="@mipmap/archive" />
+            </LinearLayout>
+            <!-- Bottom view archive icon end -->
+            <!-- Bottom view delete icon start -->
+            <LinearLayout
+                android:layout_width="@dimen/layout_swipelayout_height"
+                android:layout_height="match_parent"
+                android:background="@color/red"
+                android:layout_gravity="left">
+                <ImageView
+                    android:id="@+id/swipe_delete"
+                    android:layout_width="@dimen/layout_swipelayout_height"
+                    android:layout_height="@dimen/layout_swipelayout_height"
+                    android:gravity="center"
+                    android:padding="@dimen/layout_image_padding"
+                    android:src="@mipmap/delete" />
+            </LinearLayout>
+            <!-- Bottom view delete icon end -->
+        </LinearLayout>
+        <!-- Bottom view holder end -->
+        <!-- Surface view start -->
+        <LinearLayout
+            android:padding="@dimen/layout_surfaceview_padding"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="16sp"
+                android:text="@string/test" />
+        </LinearLayout>
+        <!-- Surface view end -->
+    </com.daimajia.swipe.SwipeLayout>
+</RelativeLayout>
