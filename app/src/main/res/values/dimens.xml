@@ -9,7 +9,7 @@
     <dimen name="layout_swipelayout_tripleheight">180dp</dimen>
 
     <!-- Image paddings. -->
-    <dimen name="layout_image_padding">10dp</dimen>
+    <dimen name="layout_image_padding">16dp</dimen>
 
     <!-- Text size. -->
     <dimen name="layout_main_textsize">16sp</dimen>
