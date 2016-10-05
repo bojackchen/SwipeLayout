@@ -5,12 +5,20 @@
 
     <!-- Default paddings and sizes for layout design. -->
     <dimen name="layout_surfaceview_padding">5dp</dimen>
-    <dimen name="layout_swipelayout_height">60dp</dimen>
-    <dimen name="layout_swipelayout_tripleheight">180dp</dimen>
+    <dimen name="layout_swipelayout_size">60dp</dimen>
+    <dimen name="layout_swipelayout_triplesize">180dp</dimen>
+    <dimen name="layout_swipelayout_halfsize">30dp</dimen>
+
+    <!-- Default size of head layout (60 - 2*5 = 50) -->
+    <dimen name="layout_headwrapper_size">50dp</dimen>
 
     <!-- Image paddings. -->
     <dimen name="layout_image_padding">16dp</dimen>
+    <dimen name="layout_head_padding">10dp</dimen>
+    <dimen name="layout_text_padding">10dp</dimen>
 
     <!-- Text size. -->
-    <dimen name="layout_main_textsize">16sp</dimen>
+    <dimen name="layout_name_textsize">20sp</dimen>
+    <dimen name="layout_time_textsize">12sp</dimen>
+    <dimen name="layout_content_textsize">12sp</dimen>
 </resources>

@@ -2,5 +2,7 @@
     <string name="app_name">SwipeLayout</string>
 
     <!-- Surface view display text -->
-    <string name="test">SwipeLayout test</string>
+    <string name="name">Test user</string>
+    <string name="content">Test message to be shown.</string>
+    <string name="time">21:29</string>
 </resources>
