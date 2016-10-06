@@ -21,7 +21,17 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_main" />
+    <com.daimajia.swipe.SwipeLayout
+        android:id="@+id/swipe_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_swipelayout_size"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.fchen.swipelayout.MainActivity">
+
+        <include layout="@layout/activity_bottomview" />
+        <include layout="@layout/activity_surfaceview" />
+
+    </com.daimajia.swipe.SwipeLayout>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
