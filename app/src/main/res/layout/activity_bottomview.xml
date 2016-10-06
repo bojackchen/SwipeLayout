@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Bottom view holder start -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_wrapper"
+    android:weightSum="1"
+    android:layout_gravity="left"
+    android:layout_width="@dimen/layout_swipelayout_triplesize"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.fchen.swipelayout.MainActivity"
+    tools:showIn="@layout/activity_main">
+    <!-- Bottom view message icon start -->
+    <LinearLayout
+        android:layout_width="@dimen/layout_swipelayout_size"
+        android:layout_height="match_parent"
+        android:background="@color/grey"
+        android:layout_gravity="left">
+        <ImageView
+            android:id="@+id/swipe_message"
+            android:layout_width="@dimen/layout_swipelayout_size"
+            android:layout_height="@dimen/layout_swipelayout_size"
+            android:gravity="center"
+            android:padding="@dimen/layout_image_padding"
+            android:src="@drawable/message" />
+    </LinearLayout>
+    <!-- Bottom view message icon end -->
+    <!-- Bottom view archive icon start -->
+    <LinearLayout
+        android:layout_width="@dimen/layout_swipelayout_size"
+        android:layout_height="match_parent"
+        android:background="@color/blue"
+        android:layout_gravity="left">
+        <ImageView
+            android:id="@+id/swipe_archive"
+            android:layout_width="@dimen/layout_swipelayout_size"
+            android:layout_height="@dimen/layout_swipelayout_size"
+            android:gravity="center"
+            android:padding="@dimen/layout_image_padding"
+            android:src="@drawable/archive" />
+    </LinearLayout>
+    <!-- Bottom view archive icon end -->
+    <!-- Bottom view delete icon start -->
+    <LinearLayout
+        android:layout_width="@dimen/layout_swipelayout_size"
+        android:layout_height="match_parent"
+        android:background="@color/red"
+        android:layout_gravity="left">
+        <ImageView
+            android:id="@+id/swipe_delete"
+            android:layout_width="@dimen/layout_swipelayout_size"
+            android:layout_height="@dimen/layout_swipelayout_size"
+            android:gravity="center"
+            android:padding="@dimen/layout_image_padding"
+            android:src="@drawable/delete" />
+    </LinearLayout>
+    <!-- Bottom view delete icon end -->
+</LinearLayout>
+<!-- Bottom view holder end -->

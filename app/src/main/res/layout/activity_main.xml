@@ -1,146 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:fitsSystemWindows="true"
     tools:context="com.fchen.swipelayout.MainActivity">
 
-    <com.daimajia.swipe.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/swipe_layout"
+    <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/layout_swipelayout_size">
-        <!-- Bottom view holder start -->
-        <LinearLayout
-            android:id="@+id/bottom_wrapper"
-            android:weightSum="1"
-            android:layout_gravity="left"
-            android:layout_width="@dimen/layout_swipelayout_triplesize"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-            <!-- Bottom view message icon start -->
-            <LinearLayout
-                android:layout_width="@dimen/layout_swipelayout_size"
-                android:layout_height="match_parent"
-                android:background="@color/grey"
-                android:layout_gravity="left">
-                <ImageView
-                    android:id="@+id/swipe_message"
-                    android:layout_width="@dimen/layout_swipelayout_size"
-                    android:layout_height="@dimen/layout_swipelayout_size"
-                    android:gravity="center"
-                    android:padding="@dimen/layout_image_padding"
-                    android:src="@drawable/message"/>
-            </LinearLayout>
-            <!-- Bottom view message icon end -->
-            <!-- Bottom view archive icon start -->
-            <LinearLayout
-                android:layout_width="@dimen/layout_swipelayout_size"
-                android:layout_height="match_parent"
-                android:background="@color/blue"
-                android:layout_gravity="left">
-                <ImageView
-                    android:id="@+id/swipe_archive"
-                    android:layout_width="@dimen/layout_swipelayout_size"
-                    android:layout_height="@dimen/layout_swipelayout_size"
-                    android:gravity="center"
-                    android:padding="@dimen/layout_image_padding"
-                    android:src="@drawable/archive"/>
-            </LinearLayout>
-            <!-- Bottom view archive icon end -->
-            <!-- Bottom view delete icon start -->
-            <LinearLayout
-                android:layout_width="@dimen/layout_swipelayout_size"
-                android:layout_height="match_parent"
-                android:background="@color/red"
-                android:layout_gravity="left">
-                <ImageView
-                    android:id="@+id/swipe_delete"
-                    android:layout_width="@dimen/layout_swipelayout_size"
-                    android:layout_height="@dimen/layout_swipelayout_size"
-                    android:gravity="center"
-                    android:padding="@dimen/layout_image_padding"
-                    android:src="@drawable/delete"/>
-            </LinearLayout>
-            <!-- Bottom view delete icon end -->
-        </LinearLayout>
-        <!-- Bottom view holder end -->
-        <!-- Surface view start -->
-        <RelativeLayout
-            android:background="@color/white"
-            android:padding="@dimen/layout_surfaceview_padding"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <!-- Header start -->
-            <LinearLayout
-                android:id="@+id/head_wrapper"
-                android:layout_width="@dimen/layout_headwrapper_size"
-                android:layout_height="match_parent"
-                android:padding="@dimen/layout_head_padding"
-                android:background="@color/black">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/people"/>
-            </LinearLayout>
-            <!-- Header end -->
-            <!-- Name start -->
-            <LinearLayout
-                android:id="@+id/name_wrapper"
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/layout_swipelayout_halfsize"
-                android:layout_toRightOf="@id/head_wrapper"
-                android:background="@color/white">
-                <!-- Name start -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/layout_text_padding"
-                    android:text="@string/name"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/layout_name_textsize"/>
-                <!-- Name end -->
-            </LinearLayout>
-            <!-- Name end -->
-            <!-- Time start -->
-            <LinearLayout
-                android:id="@+id/time_wrapper"
-                android:gravity="right"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/layout_swipelayout_halfsize"
-                android:layout_toRightOf="@id/name_wrapper"
-                android:background="@color/white">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="@dimen/layout_text_padding"
-                    android:text="@string/time"
-                    android:textColor="@color/grey"
-                    android:textSize="@dimen/layout_time_textsize"/>
-            </LinearLayout>
-            <!-- Time end -->
-            <!-- Content start -->
-            <LinearLayout
-                android:gravity="bottom"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/layout_swipelayout_halfsize"
-                android:layout_toRightOf="@id/head_wrapper"
-                android:layout_below="@id/name_wrapper"
-                android:background="@color/white">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/layout_text_padding"
-                    android:text="@string/content"
-                    android:textColor="@color/grey"
-                    android:textSize="@dimen/layout_time_textsize"/>
-            </LinearLayout>
-            <!-- Content end -->
-        </RelativeLayout>
-        <!-- Surface view end -->
-    </com.daimajia.swipe.SwipeLayout>
-</RelativeLayout>
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_main" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+
+</android.support.design.widget.CoordinatorLayout>

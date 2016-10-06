@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Surface view start -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:padding="@dimen/layout_surfaceview_padding"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.fchen.swipelayout.MainActivity"
+    tools:showIn="@layout/activity_main">
+    <!-- Header start -->
+    <LinearLayout
+        android:id="@+id/head_wrapper"
+        android:layout_width="@dimen/layout_headwrapper_size"
+        android:layout_height="match_parent"
+        android:padding="@dimen/layout_head_padding"
+        android:background="@color/black">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/people" />
+    </LinearLayout>
+    <!-- Header end -->
+    <!-- Name start -->
+    <LinearLayout
+        android:id="@+id/name_wrapper"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/layout_swipelayout_halfsize"
+        android:layout_toRightOf="@id/head_wrapper"
+        android:background="@color/white">
+        <!-- Name start -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/layout_text_padding"
+            android:text="@string/name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/layout_name_textsize" />
+        <!-- Name end -->
+    </LinearLayout>
+    <!-- Name end -->
+    <!-- Time start -->
+    <LinearLayout
+        android:id="@+id/time_wrapper"
+        android:gravity="right"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_swipelayout_halfsize"
+        android:layout_toRightOf="@id/name_wrapper"
+        android:background="@color/white">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/layout_text_padding"
+            android:text="@string/time"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/layout_time_textsize" />
+    </LinearLayout>
+    <!-- Time end -->
+    <!-- Content start -->
+    <LinearLayout
+        android:gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_swipelayout_halfsize"
+        android:layout_toRightOf="@id/head_wrapper"
+        android:layout_below="@id/name_wrapper"
+        android:background="@color/white">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/layout_text_padding"
+            android:text="@string/content"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/layout_time_textsize" />
+    </LinearLayout>
+    <!-- Content end -->
+</RelativeLayout>
+<!-- Surface view end -->
