@@ -3,6 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="background_window">#FFE5E5E5</color>
 
     <!-- Standard colors for use. -->
     <color name="red">#FF0000</color>
