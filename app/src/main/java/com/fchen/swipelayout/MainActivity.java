@@ -13,23 +13,34 @@ import android.widget.Toast;
 
 import com.daimajia.swipe.SwipeLayout;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class MainActivity extends AppCompatActivity {
 
-    private SwipeLayout swipeLayout;
-    private ImageView imageIconMessage;
-    private ImageView imageIconArchive;
-    private ImageView imageIconDelete;
+    @BindView(R.id.swipe_layout)
+    SwipeLayout swipeLayout;
+    @BindView(R.id.swipe_message)
+    ImageView imageIconMessage;
+    @BindView(R.id.swipe_archive)
+    ImageView imageIconArchive;
+    @BindView(R.id.swipe_delete)
+    ImageView imageIconDelete;
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
+    @BindView(R.id.fab)
+    FloatingActionButton fab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        ButterKnife.bind(this);
+
         // Set up toolbar
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -38,14 +49,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Get swipeLayout object
-        swipeLayout = (SwipeLayout) findViewById(R.id.swipe_layout);
+        // Set SwipeLayout showmode
         swipeLayout.setShowMode(SwipeLayout.ShowMode.LayDown);
-
-        // Get image icon object, message and delete
-        imageIconMessage = (ImageView) findViewById(R.id.swipe_message);
-        imageIconArchive = (ImageView) findViewById(R.id.swipe_archive);
-        imageIconDelete = (ImageView) findViewById(R.id.swipe_delete);
 
         swipeLayout.addSwipeListener(new SwipeLayout.SwipeListener() {
             @Override
