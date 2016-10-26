@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
-        // Set up toolbar
+        // set up toolbar
         setSupportActionBar(toolbar);
 
         fab.setOnClickListener(new View.OnClickListener() {
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Set SwipeLayout showmode
+        // set SwipeLayout showmode
         swipeLayout.setShowMode(SwipeLayout.ShowMode.LayDown);
 
         swipeLayout.addSwipeListener(new SwipeLayout.SwipeListener() {
@@ -114,14 +114,14 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu.
+        // inflate the menu.
         getMenuInflater().inflate(R.menu.menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle actions of menu items clicked.
+        // handle actions of menu items clicked.
         switch (item.getItemId()) {
             case R.id.action_gridview:
                 Toast.makeText(getApplicationContext(), "GridView clicked", Toast.LENGTH_SHORT).show();
