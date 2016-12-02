@@ -24,7 +24,7 @@
             android:layout_height="@dimen/layout_swipelayout_size"
             android:gravity="center"
             android:padding="@dimen/layout_image_padding"
-            android:src="@drawable/message" />
+            app:srcCompat="@drawable/message" />
     </LinearLayout>
     <!-- Bottom view message icon end -->
     <!-- Bottom view archive icon start -->
@@ -39,7 +39,7 @@
             android:layout_height="@dimen/layout_swipelayout_size"
             android:gravity="center"
             android:padding="@dimen/layout_image_padding"
-            android:src="@drawable/archive" />
+            app:srcCompat="@drawable/archive" />
     </LinearLayout>
     <!-- Bottom view archive icon end -->
     <!-- Bottom view delete icon start -->
@@ -54,7 +54,7 @@
             android:layout_height="@dimen/layout_swipelayout_size"
             android:gravity="center"
             android:padding="@dimen/layout_image_padding"
-            android:src="@drawable/delete" />
+            app:srcCompat="@drawable/delete" />
     </LinearLayout>
     <!-- Bottom view delete icon end -->
 </LinearLayout>
